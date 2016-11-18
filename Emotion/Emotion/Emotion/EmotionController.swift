@@ -96,7 +96,7 @@ extension EmotionController {
 }
 
 
-extension EmotionController : UICollectionViewDataSource {
+extension EmotionController : UICollectionViewDataSource ,UICollectionViewDelegate{
 
     func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
         return manager.packages.count
@@ -112,7 +112,7 @@ extension EmotionController : UICollectionViewDataSource {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier(EmotionCell, forIndexPath: indexPath) as! EmoticonViewCell
         
         //2.给cell设置数据
-        cell.backgroundColor = indexPath.item % 2 == 0 ? UIColor.redColor() : UIColor.orangeColor()
+//        cell.backgroundColor = indexPath.item % 2 == 0 ? UIColor.redColor() : UIColor.orangeColor()
         
         let package = manager.packages[indexPath.section]
         let emoticon = package.emoticons[indexPath.item]
@@ -120,6 +120,38 @@ extension EmotionController : UICollectionViewDataSource {
         return cell
     }
     
+ /// 代理方法
+    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        
+        //1.去除点击的表情
+        let package = manager.packages[indexPath.section]
+        let emoticon = package.emoticons[indexPath.item]
+        
+        //2.将点击的表情插入最近分组中
+        insertRecentlyEmotion(emoticon)
+    }
+    
+    private func insertRecentlyEmotion(emotion : Emoticon){
+    
+        //1.如果是空白表情或者删除按钮，不需要插入
+        if emotion.isRemove || emotion.isEmpty {
+        return
+        }
+        
+        //2.删除一个表情
+        if manager.packages.first!.emoticons.contains(emotion) {
+        
+            let index = (manager.packages.first?.emoticons.indexOf(emotion))!
+            manager.packages.first?.emoticons.removeAtIndex(index)
+        }else
+        { //原来没有这个表情
+        manager.packages.first?.emoticons.removeAtIndex(19)
+        }
+        
+        //3。将emoticon插入最近分组中
+        manager.packages.first?.emoticons.insert(emotion, atIndex: 0)
+        
+    }
     
 }
 

@@ -49,11 +49,20 @@ class Emoticon: NSObject {
     // //MARK: --数据处理
     var pngPath : String?
     var emojiCode : String?
-    
+    var isRemove : Bool = false
+    var isEmpty : Bool = false
      //MARK: --自定义构造函数
     init(dict: [String : String]) {
         super.init()
         setValuesForKeysWithDictionary(dict)
+    }
+    
+    
+    init(isRemove : Bool) {
+        self.isRemove = isRemove
+    }
+    init(isEmpty : Bool) {
+        self.isEmpty = isEmpty
     }
     
     override func setValue(value: AnyObject?, forUndefinedKey key: String) {
