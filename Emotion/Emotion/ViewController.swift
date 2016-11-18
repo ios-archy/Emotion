@@ -10,16 +10,28 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var TextView: UITextView!
+    
+    private lazy var emotionVC : EmotionController = EmotionController()
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        TextView.inputView = emotionVC.view
+        
+        
+        let manager = EmoticonManager()
+        for package in manager.packages
+        {
+            for emoticon in package.emoticons {
+            print(emoticon)
+                
+            }
+        }
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        TextView.becomeFirstResponder()
     }
-
 
 }
 
