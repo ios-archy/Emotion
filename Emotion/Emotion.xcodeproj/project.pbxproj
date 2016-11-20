@@ -20,6 +20,8 @@
 		285C0A121DDED82A001FC2E7 /* EmoticonPackage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285C0A111DDED82A001FC2E7 /* EmoticonPackage.swift */; };
 		285C0A141DDED9A5001FC2E7 /* EmoticonManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285C0A131DDED9A5001FC2E7 /* EmoticonManager.swift */; };
 		285C0A161DDEDFD6001FC2E7 /* EmoticonViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285C0A151DDEDFD6001FC2E7 /* EmoticonViewCell.swift */; };
+		DE57305A1DE1530700380355 /* EmoticonAttachment.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5730591DE1530700380355 /* EmoticonAttachment.swift */; };
+		DE57305C1DE1553A00380355 /* UITextView-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE57305B1DE1553A00380355 /* UITextView-Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +61,8 @@
 		285C0A111DDED82A001FC2E7 /* EmoticonPackage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmoticonPackage.swift; sourceTree = "<group>"; };
 		285C0A131DDED9A5001FC2E7 /* EmoticonManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmoticonManager.swift; sourceTree = "<group>"; };
 		285C0A151DDEDFD6001FC2E7 /* EmoticonViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmoticonViewCell.swift; sourceTree = "<group>"; };
+		DE5730591DE1530700380355 /* EmoticonAttachment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmoticonAttachment.swift; sourceTree = "<group>"; };
+		DE57305B1DE1553A00380355 /* UITextView-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextView-Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +149,8 @@
 				285C0A0C1DDED6A2001FC2E7 /* Emoticons.bundle */,
 				285C0A0A1DDED68D001FC2E7 /* EmotionController.swift */,
 				285C0A151DDEDFD6001FC2E7 /* EmoticonViewCell.swift */,
+				DE5730591DE1530700380355 /* EmoticonAttachment.swift */,
+				DE57305B1DE1553A00380355 /* UITextView-Extension.swift */,
 			);
 			path = Emotion;
 			sourceTree = "<group>";
@@ -293,6 +299,8 @@
 			files = (
 				285C0A161DDEDFD6001FC2E7 /* EmoticonViewCell.swift in Sources */,
 				285C0A0B1DDED68D001FC2E7 /* EmotionController.swift in Sources */,
+				DE57305C1DE1553A00380355 /* UITextView-Extension.swift in Sources */,
+				DE57305A1DE1530700380355 /* EmoticonAttachment.swift in Sources */,
 				285C09DC1DDEAA59001FC2E7 /* ViewController.swift in Sources */,
 				285C0A121DDED82A001FC2E7 /* EmoticonPackage.swift in Sources */,
 				285C0A141DDED9A5001FC2E7 /* EmoticonManager.swift in Sources */,
@@ -526,6 +534,7 @@
 				285C0A001DDEAA59001FC2E7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		285C0A011DDEAA59001FC2E7 /* Build configuration list for PBXNativeTarget "EmotionTests" */ = {
 			isa = XCConfigurationList;
@@ -534,6 +543,7 @@
 				285C0A031DDEAA59001FC2E7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		285C0A041DDEAA59001FC2E7 /* Build configuration list for PBXNativeTarget "EmotionUITests" */ = {
 			isa = XCConfigurationList;
@@ -542,6 +552,7 @@
 				285C0A061DDEAA59001FC2E7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

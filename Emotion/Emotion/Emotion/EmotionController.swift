@@ -13,10 +13,25 @@ private let EmotionCell = "EmotionCell"
 
 class EmotionController: UIViewController {
 
+    //定义属性
+    var emoticonCallBack : (emoticon : Emoticon) -> ()
+    
+    //懒加载属性
     private lazy var collectionView : UICollectionView = UICollectionView(frame: CGRectZero, collectionViewLayout: EmotionCollectionViewLayout())
     private lazy var tooBar : UIToolbar = UIToolbar()
     
     private lazy var manager = EmoticonManager()
+    
+    // MARK:-自定义构造函数
+    init(emoticonCallBack : (emoticon : Emoticon)-> ())
+    {
+        self.emoticonCallBack = emoticonCallBack
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -57,6 +72,7 @@ extension EmotionController {
     private func prepareForCollectionView(){
     collectionView.registerClass(EmoticonViewCell.self, forCellWithReuseIdentifier: EmotionCell)
         collectionView.dataSource = self
+        collectionView.delegate = self
     }
     
     private func prepareForTooBar(){
@@ -129,6 +145,9 @@ extension EmotionController : UICollectionViewDataSource ,UICollectionViewDelega
         
         //2.将点击的表情插入最近分组中
         insertRecentlyEmotion(emoticon)
+        
+        //3.将表情回调给外界控制器
+        emoticonCallBack(emoticon: emoticon)
     }
     
     private func insertRecentlyEmotion(emotion : Emoticon){

@@ -71,7 +71,7 @@ class Emoticon: NSObject {
     
     override var description : String {
     
-        return dictionaryWithValuesForKeys(["code","pngPath" ,"chs"]).description
+        return dictionaryWithValuesForKeys(["emojiCode","pngPath" ,"chs"]).description
     }
     
 }

@@ -47,7 +47,13 @@
                             <constraint firstItem="L51-kE-34m" firstAttribute="top" secondItem="OcZ-Yr-Ww3" secondAttribute="bottom" id="udp-Xl-Usl"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="wYe-sb-Caw"/>
+                    <navigationItem key="navigationItem" id="wYe-sb-Caw">
+                        <barButtonItem key="rightBarButtonItem" title="发送" id="e9g-WZ-IJj">
+                            <connections>
+                                <action selector="SenderClick:" destination="MPo-tu-WOT" id="3rY-MK-avH"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="TextView" destination="OcZ-Yr-Ww3" id="FKr-Nc-I41"/>
                     </connections>
