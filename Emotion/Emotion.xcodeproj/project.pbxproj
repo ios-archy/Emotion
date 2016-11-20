@@ -22,6 +22,7 @@
 		285C0A161DDEDFD6001FC2E7 /* EmoticonViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 285C0A151DDEDFD6001FC2E7 /* EmoticonViewCell.swift */; };
 		DE57305A1DE1530700380355 /* EmoticonAttachment.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5730591DE1530700380355 /* EmoticonAttachment.swift */; };
 		DE57305C1DE1553A00380355 /* UITextView-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE57305B1DE1553A00380355 /* UITextView-Extension.swift */; };
+		DEF241A91DE1EEA400416FD3 /* FindEmoticon.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF241A81DE1EEA400416FD3 /* FindEmoticon.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		285C0A151DDEDFD6001FC2E7 /* EmoticonViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmoticonViewCell.swift; sourceTree = "<group>"; };
 		DE5730591DE1530700380355 /* EmoticonAttachment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmoticonAttachment.swift; sourceTree = "<group>"; };
 		DE57305B1DE1553A00380355 /* UITextView-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextView-Extension.swift"; sourceTree = "<group>"; };
+		DEF241A81DE1EEA400416FD3 /* FindEmoticon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FindEmoticon.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +153,7 @@
 				285C0A151DDEDFD6001FC2E7 /* EmoticonViewCell.swift */,
 				DE5730591DE1530700380355 /* EmoticonAttachment.swift */,
 				DE57305B1DE1553A00380355 /* UITextView-Extension.swift */,
+				DEF241A81DE1EEA400416FD3 /* FindEmoticon.swift */,
 			);
 			path = Emotion;
 			sourceTree = "<group>";
@@ -303,6 +306,7 @@
 				DE57305A1DE1530700380355 /* EmoticonAttachment.swift in Sources */,
 				285C09DC1DDEAA59001FC2E7 /* ViewController.swift in Sources */,
 				285C0A121DDED82A001FC2E7 /* EmoticonPackage.swift in Sources */,
+				DEF241A91DE1EEA400416FD3 /* FindEmoticon.swift in Sources */,
 				285C0A141DDED9A5001FC2E7 /* EmoticonManager.swift in Sources */,
 				285C09DA1DDEAA59001FC2E7 /* AppDelegate.swift in Sources */,
 				285C0A101DDED6E3001FC2E7 /* Emoticon.swift in Sources */,
